@@ -1,7 +1,6 @@
 // _reboot.scss
 
 :root {
-    font-size: 16px;
     font-family: "Microsoft Yahei UI", "Verdana", "Simsun", "Segoe UI", "-apple-system", "BlinkMacSystemFont", "Roboto", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     vertical-align: middle;
@@ -77,25 +76,25 @@
     --width-container-xl: 100%;
     --width-container-xxl: 100%;
 
-    @media (min-width: 576px) {
+    @media ( min-width: 576px ) {
         --width-container: 540px;
         --width-container-sm: 540px;
     }
 
-    @media (min-width: 768px) {
+    @media ( min-width: 768px ) {
         --width-container: 720px;
         --width-container-sm: 720px;
         --width-container-md: 720px;
     }
 
-    @media (min-width: 992px) {
+    @media ( min-width: 992px ) {
         --width-container: 960px;
         --width-container-sm: 960px;
         --width-container-md: 960px;
         --width-container-lg: 960px;
     }
 
-    @media (min-width: 1200px) {
+    @media ( min-width: 1200px ) {
         --width-container: 1140px;
         --width-container-sm: 1140px;
         --width-container-md: 1140px;
@@ -103,7 +102,7 @@
         --width-container-xl: 1140px;
     }
 
-    @media (min-width: 1400px) {
+    @media ( min-width: 1400px ) {
         --width-container: 1320px;
         --width-container-sm: 1320px;
         --width-container-md: 1320px;
@@ -153,7 +152,7 @@ body {
     margin: 0;
 }
 
-button {
+button, .button {
     display: inline-block;
     
     min-width: 80px;
@@ -179,10 +178,12 @@ button {
 
     &:hover {
         background-color: var(--gray20);
+        text-decoration: none;
     }
 
     &:active {
         background-color: var(--gray30);
+        text-decoration: none;
     }
 
     &.active {
@@ -202,25 +203,11 @@ h1 {
     border-bottom: 1px solid var(--gray40);
 }
 
-h2 {
-    font-size: var(--font-h2);
-}
-
-h3 {
-    font-size: var(--font-h3);
-}
-
-h4 {
-    font-size: var(--font-h4);
-}
-
-h5 {
-    font-size: var(--font-h5);
-}
-
-h6 {
-    font-size: var(--font-h6);
-}
+h2 { font-size: var(--font-h2); }
+h3 { font-size: var(--font-h3); }
+h4 { font-size: var(--font-h4); }
+h5 { font-size: var(--font-h5); }
+h6 { font-size: var(--font-h6); }
     
 small {
     font-size: .75em;

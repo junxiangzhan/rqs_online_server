@@ -115,36 +115,39 @@ var Nav = /*#__PURE__*/function (_React$Component) {
     _this.state = {
       isCollapsed: true
     };
-    _this.getToggler = _this.getToggler.bind(_assertThisInitialized(_this));
-    _this.componentDidMount = _this.componentDidMount.bind(_assertThisInitialized(_this));
+    _this.toggleNav = _this.toggleNav.bind(_assertThisInitialized(_this));
+    _this.getWrapper = _this.getWrapper.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(Nav, [{
-    key: "getToggler",
-    value: function getToggler(toggler) {
+    key: "getWrapper",
+    value: function getWrapper(wrapper) {
       this.setState({
-        toggler: toggler
+        wrapper: wrapper
       });
     }
   }, {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      document.addEventListener('click', function (event) {
-        if (event.target === this.state.toggler) {
-          return this.setState({
-            isCollapsed: !this.state.isCollapsed
-          });
-        }
-
-        this.setState({
-          isCollapsed: true
-        });
-      }.bind(this));
+    key: "toggleNav",
+    value: function toggleNav() {
+      this.setState({
+        isCollapsed: !this.state.isCollapsed
+      });
     }
   }, {
     key: "render",
     value: function render() {
+      var togglerPorps = {
+        className: ['navbar-toggler', !this.state.isCollapsed && 'active'].filter(Boolean).join(' '),
+        'aria-label': 'navbar toggler',
+        onClick: this.toggleNav
+      };
+      var collapseProps = {
+        className: ['navbar-collapse', this.state.isCollapsed && 'collapsed'].filter(Boolean).join(' '),
+        style: {
+          height: this.state.isCollapsed || this.state.wrapper.getBoundingClientRect().height
+        }
+      };
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
         id: "navbar"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -152,13 +155,51 @@ var Nav = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
         to: "/",
         className: "navbar-brand"
-      }, "\u96A8\u6A5F\u51FA\u984C\u7CFB\u7D71"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-        className: ['navbar-toggler', !this.state.isCollapsed && 'active'].filter(Boolean).join(' '),
-        "aria-label": "navbar-toggler",
-        ref: this.getToggler
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+        className: "icon"
+      }, "\uF7C1"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, "\u96A8\u6A5F\u51FA\u984C\u7CFB\u7D71")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "navbar-collapse"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "navbar-wrapper",
+        ref: this.getWrapper
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "navbar-nav"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "nav-item"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+        to: "/questions",
+        className: "nav-link"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, "\u984C\u5EAB"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "nav-item"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+        to: "/announcement",
+        className: "nav-link"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, "\u516C\u544A"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "nav-item"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+        to: "/report",
+        className: "nav-link"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, "\u56DE\u5831")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "navbar-nav"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "nav-item"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+        to: "/download",
+        className: "nav-link"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-        className: "navbar-toggler-icon"
-      }))));
+        className: "icon-link"
+      }, "\u8A9E\u8A00 ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+        className: "icon"
+      }, "\uF2B7")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "nav-item"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+        to: "/download",
+        className: "nav-link"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+        className: "icon-link"
+      }, "\u4E0B\u8F09 ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+        className: "icon"
+      }, "\uE896")))))))));
     }
   }]);
 
