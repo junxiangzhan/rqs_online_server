@@ -112,10 +112,6 @@ var Nav = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, Nav);
 
     _this = _super.call(this, props);
-    _this.state = {
-      isCollapsed: true
-    };
-    _this.toggleNav = _this.toggleNav.bind(_assertThisInitialized(_this));
     _this.getWrapper = _this.getWrapper.bind(_assertThisInitialized(_this));
     return _this;
   }
@@ -128,26 +124,8 @@ var Nav = /*#__PURE__*/function (_React$Component) {
       });
     }
   }, {
-    key: "toggleNav",
-    value: function toggleNav() {
-      this.setState({
-        isCollapsed: !this.state.isCollapsed
-      });
-    }
-  }, {
     key: "render",
     value: function render() {
-      var togglerPorps = {
-        className: ['navbar-toggler', !this.state.isCollapsed && 'active'].filter(Boolean).join(' '),
-        'aria-label': 'navbar toggler',
-        onClick: this.toggleNav
-      };
-      var collapseProps = {
-        className: ['navbar-collapse', this.state.isCollapsed && 'collapsed'].filter(Boolean).join(' '),
-        style: {
-          height: this.state.isCollapsed || this.state.wrapper.getBoundingClientRect().height
-        }
-      };
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
         id: "navbar"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -184,7 +162,7 @@ var Nav = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "nav-item"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-        to: "/download",
+        to: "/language",
         className: "nav-link"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
         className: "icon-link"
@@ -199,7 +177,17 @@ var Nav = /*#__PURE__*/function (_React$Component) {
         className: "icon-link"
       }, "\u4E0B\u8F09 ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
         className: "icon"
-      }, "\uE896")))))))));
+      }, "\uE896")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "nav-item"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+        href: "https://github.com/junxiangzhan/rqs_online_server",
+        target: "_blank",
+        className: "nav-link"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+        className: "icon-link"
+      }, "GitHub ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+        className: "icon"
+      }, "\uEBA1")))))))));
     }
   }]);
 
