@@ -1,0 +1,30 @@
+.icon {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-family: 'fabric', 'codicon';
+    font-style: normal;
+    font-weight: normal;
+}
+
+.icon-fabric {
+    font-family: 'fabric';
+}
+
+.icon-bold {
+    font-weight: bold;
+}
+
+.icon-alt {
+    transform: scaleX(-1);
+}
+
+@font-face {
+    font-family: 'codicon';
+    src: url('../fonts/codicon.ttf');
+}
+
+@font-face {
+    font-family: 'fabric';
+    src: url('../fonts/fabric.woff');
+}
