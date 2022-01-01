@@ -4,6 +4,7 @@ module.exports = {
     target: "node",
     entry: "./src/client/index.js",
     mode: "development",
+    devtool: "source-map",
 
     output: {
         filename: "bundle.js",
