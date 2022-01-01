@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
     target: "node",
-    entry: "./src/index.js",
+    entry: "./src/client/index.js",
     mode: "development",
 
     output: {

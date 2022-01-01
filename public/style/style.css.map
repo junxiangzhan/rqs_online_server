@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,0BAA0B;AAE1B,AAAA,IAAI,CAAC;EACD,MAAM,EAAE,CAAC;CACZ",
+    "sources": [
+        "style.scss",
+        "_reboot.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
